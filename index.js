@@ -1,31 +1,30 @@
 
 alert("Bienvenido a tu simulador de cuotas para vivienda propia");
+let nombre= prompt("Cual es tu nombre?");
+let PagoInicial= parseInt(prompt("Cuanto Considerarias darnos para Pago Inicial o Downpayment?"));
 
-let precioCasa = parseInt(prompt("Cuanto es el costo de la Vivienda que deseas Adquirir?"));
-
-if (precioCasa <= 100.000) { 
-    let opcion1 = (`Ingresaste ${precioCasa} Contamos con Aproximadamente 10 diferentes opciones para ti`);
+if (PagoInicial <= 1000) {
+    let opcion1 = (`${nombre} Ingresaste ${PagoInicial} Lamentablemente no podemos projectar cuotas ya que es muy bajo el pago inicial`);
     alert(opcion1);
-}
-else if (precioCasa < 100.000 ) { 
-    let opcion2 = (`Ingresaste ${precioCasa} Contamos con Aproximadamente 15 diferentes opciones para ti`);
+} else if (PagoInicial <= 2000) {
+    let opcion2 = (`${nombre} Ingresaste ${PagoInicial} Super ...! para ello intentaremos ofrecerte los menores interes`);
     alert(opcion2);
-}
-else if (precioCasa  < 200.000) {
-    let opcion3 = (`Ingresaste ${precioCasa} Contamos con Aproximadamente 25 diferentes opciones para ti`);
+}else if (PagoInicial <= 3000) {
+    let opcion3 = (`${nombre} Ingresaste ${PagoInicial} Perfecto ...! contamos con opciones para ti, Tenemos los menores intereses`);
     alert(opcion3);
-}
-else if (precioCasa < 400.000) {
-    let opcion4 = (`Ingresaste ${precioCasa} Contamos con Aproximadamente 30 diferentes opciones para ti`);
+}else if (PagoInicial <= 4000) {
+    let opcion4 = (`${nombre} Ingresaste ${PagoInicial} Excelente...! Contamos con los mas bajos intereses del mercado para ti`);
     alert(opcion4);
+}else if (PagoInicial >= 5000 ) {
+    let opcion5 = (`${nombre} Ingresaste ${PagoInicial} Estamos muy contentos por ti...! Contamos con los mas bajos intereses del mercado para ti + un descuento adicional`);
+    alert(opcion5);
 }
-    
-else if (precioCasa <= 500.000) {
-    alert("Lamentablemente no contamos con viviendas de este valor.. Gracias por Visitarnos");
+else {
+    alert("No Aplica, Intenta nuevamente");
 }
+
 
 /* 
-let precioAdsequible = parseInt(prompt("Ingrese cuanto podria pagar mensual en usd (Dolar Americano)"));
 
 if (precioAdsequible < 1000) {
     alert("No puedes Aplicar a nuestras viviendas");
@@ -47,4 +46,6 @@ let precioPropiedad = "500.000";
 
 
 let valor = (`hola ${precioPropiedad}`);
-alert(valor); */   
+alert(valor); */
+
+
