@@ -15,37 +15,10 @@ if (PagoInicial <= 1000) {
 }else if (PagoInicial <= 4000) {
     let opcion4 = (`${nombre} Ingresaste ${PagoInicial} Excelente...! Contamos con los mas bajos intereses del mercado para ti`);
     alert(opcion4);
-}else if (PagoInicial >= 5000 ) {
+}else if (PagoInicial <= 8000 ) {
     let opcion5 = (`${nombre} Ingresaste ${PagoInicial} Estamos muy contentos por ti...! Contamos con los mas bajos intereses del mercado para ti + un descuento adicional`);
     alert(opcion5);
+}else {
+    alert("No Aplicamos valores tan altos para un Downpayment, Intenta nuevamente");
 }
-else {
-    alert("No Aplica, Intenta nuevamente");
-}
-
-
-/* 
-
-if (precioAdsequible < 1000) {
-    alert("No puedes Aplicar a nuestras viviendas");
-    //retorn
-    
-}
-else (precioAdsequible > 1000) {
-    alert(" Felicitaciones! Puedes Aplicar a nuestras viviendas");
-    alert("Iniciemos...");
-}
-
-let anos = parseInt(promp(""));
-
-
-function problema();
-
-
-let precioPropiedad = "500.000";
-
-
-let valor = (`hola ${precioPropiedad}`);
-alert(valor); */
-
 
