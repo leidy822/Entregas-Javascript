@@ -1,10 +1,9 @@
-
     alert("Bienvenido a tu simulador de cuotas para vivienda propia");
     let nombre = prompt("Cual es tu nombre?");
     let valorHome = parseInt(prompt("Cual es valor de la propiedad que deseas obtener?"));
     let anos = parseInt(prompt(`${nombre} en cuantos años deseas finalizar tu deuda?`));
-    let interes = "0.10";
-    let descuento = " 0.15";
+    let interes = "1.10";
+    
 
     let pagoInicial = parseInt(prompt("Cuanto Considerarias darnos para Pago Inicial o Downpayment?"));
     if (pagoInicial <= 1000) {
@@ -25,14 +24,16 @@
     } else {
         alert("No se Aplica estos valores tan altos para un Downpayment, Intenta nuevamente");
     }
-
-    function f1(valorHome, pagoInicial, interes, anos,) {
-        let resultado = (valorHome - pagoInicial * (interes) / (anos));
+    
+    function f1(valorHome, pagoInicial, interes, anos ) {
+        let resultado = ((valorHome - pagoInicial) * (interes)) / (12*anos);
         let mensaje = (`${nombre} Gracias por aplicar , con tu informacion recolectada y la cantidad de años tus pagos mensuales serian de ${resultado}`);
         alert(mensaje);
     }
 
-while (pagoInicial <= 8000) {
-    let mensaje2 = "Tienes un descuento adicional del 15% del valor de la propiedad";
+if (pagoInicial <= 8000) {
+    f1(valorHome, pagoInicial, interes, anos);
+    let mensaje2 = "Felicidades Tendras un descuento adicional del 15% del valor de la propiedad";
     alert(mensaje2);
+    
     }
