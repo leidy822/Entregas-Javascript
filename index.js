@@ -28,6 +28,7 @@
     function f1(valorHome, pagoInicial, interes, anos ) {
         let resultado = ((valorHome - pagoInicial) * (interes)) / (12*anos);
         let mensaje = (`${nombre} Gracias por aplicar , con tu informacion recolectada y la cantidad de años tus pagos mensuales serian de ${resultado}`);
+        resultado= Math.floor(resultado);
         alert(mensaje);
     }
 
